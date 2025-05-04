@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Os melhores cupons e ofertas para você economizar nas suas compras online">
+  <title>Louco por Cupons - Melhores Ofertas e Descontos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" 
+         src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <style>
+    :root {
+      --primary-color: #FF6B00;
+      --secondary-color: #0E2A47;
+      --background-color: #0B1C2C;
+      --card-color: #101F30;
+      --text-color: #FFFFFF;
+      --text-secondary: #CCCCCC;
+      --border-color: rgba(255, 255, 255, 0.1);
+      --hover-color: #182C45;
+      --success-color: #28A745;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 30px 20px;
+      line-height: 1.6;
+      background-image: radial-gradient(circle at 10% 20%, rgba(11, 28, 44, 0.9) 0%, rgba(16, 31, 48, 0.9) 90%);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      object-fit: cover;
+      border: 3px solid var(--primary-color);
+      box-shadow: 0 4px 20px rgba(255, 107, 0, 0.3);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      background: linear-gradient(90deg, #FF9A3C, #FF6B00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      max-width: 320px;
+    }
+
+    .buttons-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      background-color: var(--card-color);
+      color: var(--text-color);
+      text-decoration: none;
+      padding: 16px 20px;
+      border-radius: 12px;
+      width: 100%;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: all 0.6s ease;
+    }
+
+    .button:hover {
+      background-color: var(--hover-color);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .button:hover::before {
+      left: 100%;
+    }
+
+    .button:active {
+      transform: translateY(0);
+    }
+
+    .button .icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    border-radius: 50%; /* Deixa a imagem redonda */
+    object-fit: cover;  /* Garante que a imagem preencha bem o espaço circular */
+    }
+
+
+    .button .content {
+      flex-grow: 1;
+      text-align: left;
+    }
+
+    .button .title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+      background: none;
+      -webkit-text-fill-color: var(--text-color);
+    }
+
+    .button .description {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+    }
+
+    .button .badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-left: 10px;
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    .button .more {
+      font-size: 20px;
+      color: var(--text-secondary);
+      margin-left: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .button:hover .more {
+      transform: translateX(3px);
+      color: var(--primary-color);
+    }
+
+    footer {
+      margin-top: auto;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .member-count {
+      font-size: 0.7rem;
+      color: var(--success-color);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 25px 15px;
+      }
+      
+      .logo {
+        width: 90px;
+        height: 90px;
+      }
+      
+      .title {
+        font-size: 1.6rem;
+      }
+      
+      .subtitle {
+        font-size: 0.9rem;
+      }
+      
+      .button {
+        padding: 14px 16px;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .button {
+      animation: fadeIn 0.5s ease forwards;
+      opacity: 0;
+    }
+    
+    .button:nth-child(1) { animation-delay: 0.1s; }
+    .button:nth-child(2) { animation-delay: 0.2s; }
+    .button:nth-child(3) { animation-delay: 0.3s; }
+    .button:nth-child(4) { animation-delay: 0.4s; }
+    .button:nth-child(5) { animation-delay: 0.5s; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="https://ugc.production.linktr.ee/2d97d8e3-19c2-45e7-9444-7612afc2a7d7_1000046300.jpeg" alt="Logo Louco por Cupons" class="logo">
+    <div class="header">
+      <h1 class="title">Louco por cupons</h1>
+      <p class="subtitle">As melhores ofertas e descontos exclusivos pra você economizar</p>
+    </div>
+
+    <div class="buttons-container">
+      <a href="#" class="button" onclick="trackAndRedirect('ClickWhatsApp', 'https://chat.whatsapp.com/BGI0EFO3wBKJE3iSvMfh0L')">
+        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp" class="icon">
+        <div class="content">
+          <div class="title">Grupo VIP no WhatsApp <span class="badge">NOVO</span></div>
+          <div class="description">Ofertas exclusivas e cupons diários</div>
+          <div class="member-count">🔹 10.000 membros</div>
+        </div>
+        <div class="more">›</div>
+      </a>
+
+      <a href="#" class="button" onclick="trackAndRedirect('ClickTelegram', 'https://t.me/+xvnMg1NYBsY2Y2Zh')">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" class="icon">
+        <div class="content">
+          <div class="title">Canal no Telegram</div>
+          <div class="description">Alertas instantâneos de promoções</div>
+          <div class="member-count">🔹 20.000 membros</div>
+        </div>
+        <div class="more">›</div>
+      </a>
+
+      <a href="#" class="button" onclick="trackAndRedirect('ClickBotWhatsApp', 'https://tinyurl.com/TemCupom')">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="Bot" class="icon">
+        <div class="content">
+          <div class="title">Bot de Cupons Automático</div>
+          <div class="description">Receba alertas personalizados</div>
+        </div>
+        <div class="more">›</div>
+      </a>
+
+      <a href="#" class="button" onclick="trackAndRedirect('ClickShopee', 'https://s.shopee.com.br/5KwDm7s8KI')">
+        <img src="https://i0.wp.com/casabenedetta.com.br/wp-content/uploads/2021/10/yLB7uLfQuMFZ0ll-Shopee-Logo-PNG-File.png" alt="Shopee" class="icon">
+        <div class="content">
+          <div class="title">Cupons Shopee</div>
+          <div class="description">Até 90% de desconto + frete grátis</div>
+        </div>
+        <div class="more">›</div>
+      </a>
+
+      <a href="#" class="button" onclick="trackAndRedirect('ClickMagalu', 'https://especiais.magazineluiza.com.br/magazinevoce/destaques/?showcase=loucops')">
+        <img src="https://www.imagensempng.com.br/wp-content/uploads/2023/04/Logo-Magalu-Png-1024x1024.png" alt="Magalu" class="icon">
+        <div class="content">
+          <div class="title">Ofertas Magazine Luiza</div>
+          <div class="description">Descontos exclusivos</div>
+        </div>
+        <div class="more">›</div>
+      </a>
+    </div>
+
+    <footer>
+      © 2025 Louco por Cupons<br>
+      <small>Todos os direitos reservados</small>
+    </footer>
+  </div>
+
+  <script>
+    // Função de rastreamento e redirecionamento
+    function trackAndRedirect(eventName, url) {
+      // Rastreamento do Facebook Pixel
+      if (typeof fbq !== 'undefined') {
+        fbq('trackCustom', eventName);
+      }
+      
+      // Rastreamento alternativo caso o Pixel falhe
+      try {
+        navigator.sendBeacon('https://your-analytics-endpoint.com/track', JSON.stringify({
+          event: eventName,
+          timestamp: new Date().toISOString()
+        }));
+      } catch (e) {
+        console.log('Alternative tracking failed:', e);
+      }
+      
+      // Redirecionamento com delay para o Pixel processar
+      setTimeout(() => {
+        window.open(url, '_blank');
+      }, 200);
+      
+      return false;
+    }
+    
+    // Animação de carregamento
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        document.body.classList.add('loaded');
+      }, 100);
+    });
+  </script>
+
+</body>
+</html>
